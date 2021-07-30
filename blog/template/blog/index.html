@@ -1,10 +1,46 @@
 #inheriting from base.html as global identifier ""
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
     My Blog
 {% endblock %}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock %}
+
 {% block content %}
-    <h1> Welcome to my blog </h1>
+    <section id="welcome">
+        <header>
+            <img src="{% static "blog/images/woods.png" %}" alt="Kastriot - the author of this blog" />
+            <h2>Kastriot's Blog</h2>
+        </header>
+        <p>Hi i am Kastriot</p>
+    </section>
+
+    <section id="lastest-posts">
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="{% static "blog/images/mountains.png" %}" alt="Mountain Hiking" />
+                        <div class="post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p>Best Views !</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+    
+
+    <section id="welcome">
+        <h2>What i Do</h2>
+        <p>I love programming</p>
+    </section>
+
 {% endblock %}

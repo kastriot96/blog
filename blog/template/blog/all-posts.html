@@ -1,11 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
     All my Posts
 {% endblock %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+    <link rel="stylesheet" href="{% static "blog/posts.css" %}" />
+    <link rel="stylesheet" href="{% static "blog/all-posts.css" %}" />
 {% endblock %}
 
 {% block content %}
@@ -13,9 +15,9 @@
     <h2>My collection posts</h2>
 
     <ul>
-        <li>
-            <article></article>
-        </li>
+       {% for post in all_posts %}  #goes to views.py and gets all_posts from def post
+        {% include "blog/includes/post.html" %}
+       {% endfor %}
     </ul>
 
 </section>

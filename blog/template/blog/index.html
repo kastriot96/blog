@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/posts.css" %}" />
     <link rel="stylesheet" href="{% static "blog/index.css" %}" />
 {% endblock %}
 
@@ -23,17 +24,8 @@
         <h2>My Latest Thoughts</h2>
 
         <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src="{% static "blog/images/mountains.png" %}" alt="Mountain Hiking" />
-                        <div class="post__content">
-                            <h3>Mountain Hiking</h3>
-                            <p>Best Views !</p>
-                        </div>
-                    </a>
-                </article>
-            </li>
+         {% for post in posts %}     #from views.py line 24   
+            {% include "blog/includes/post.html" %}
         </ul>
     </section>
     

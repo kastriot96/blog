@@ -13,17 +13,19 @@ def starting_page(request):
     })
 
 
+ #reaching the posts from database
+
 def posts(request):
-    #reaching the posts from database
     all_posts = Post.objects.all().order_by("-date")
     return render(request, "blog/all-posts.html", {
       "all_posts": all_posts
     })
 
 
-def post_detail(request, slug):
-    #identified_post = next(post for post in all_posts if post['slug'] == slug)
+#identified_post = next(post for post in all_posts if post['slug'] == slug)
     #right side of slug is the argument which is related to the slug above
+
+def post_detail(request, slug):
     identified_post=  get_object_or_404(Post, slug = slug)
     return render(request, "blog/post-detail.html", {
       "post": identified_post,

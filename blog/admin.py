@@ -1,17 +1,16 @@
 from django.contrib import admin
 
-# Register your models here.
-
 from .models import Post, Author, Tag
+
+# Register your models here
+
 
 class PostAdmin(admin.ModelAdmin):
     list_filter = ("author", "tags", "date",)
     list_display = ("title", "date", "author",)
-    
-    #autopopulating the slug in this way :
-    prepopulated_fields = {
-        "slug": ("title",)
-    }
+
+    #autopopulating the slugs with way
+    prepopulated_fields = {"slug": ("title",)}
 
 
 admin.site.register(Post, PostAdmin)

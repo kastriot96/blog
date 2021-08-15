@@ -2,7 +2,7 @@
 
 Hello there, since i was assured that i have enough skills to continue something further than pure Python , i decided to learn Django framework. So , this is one of my first projects that i have developed .
 
-![Project Outlook](link)
+![Project Outlook](gif.gif)
 
 ### Table of Contents
 

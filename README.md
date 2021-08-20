@@ -1,6 +1,7 @@
 # Project Blog
 
-Hello there, since i was assured that i have enough skills to continue something further than pure Python , i decided to learn Django framework. So , this is one of my first projects that i have developed .
+Hello there, since i was assured that i have enough skills to continue something further than pure Python , i decided to learn Django framework. 
+So , this is one of my first projects that i have developed . A blog , with different functionalities such as saving the post to review it later , adding a comment , collection of posts and so on :) 
 
 ![Project Outlook](gif.gif)
 
